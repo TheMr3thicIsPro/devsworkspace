@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* DevsWorkspace Theme */
+:root {
+  /* Dark background colors */
+  --background: #050509;
+  --background-secondary: #050512;
+  --foreground: #ffffff;
+  
+  /* Accent colors */
+  --accent-blue: #0066ff;
+  --accent-purple: #8000ff;
+  --accent-gradient: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+  
+  /* Neon highlights */
+  --neon-blue: #00ccff;
+  --neon-purple: #cc00ff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-foreground: var(--foreground);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-purple: var(--accent-purple);
+  --color-neon-blue: var(--neon-blue);
+  --color-neon-purple: var(--neon-purple);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Geist', sans-serif;
+}
+
+/* Global styles for cards, rounded corners, light glows and soft shadows */
+.card {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: var(--background-secondary);
+}
+
+.glow {
+  box-shadow: 0 0 10px rgba(0, 102, 255, 0.3);
+}
+
+.neon-border {
+  border: 1px solid transparent;
+  background: linear-gradient(var(--background), var(--background)) padding-box,
+              var(--accent-gradient) border-box;
+}
+
+/* Loading animation colors */
+.border-neon-blue {
+  border-color: var(--neon-blue);
+}
+
+.border-neon-purple {
+  border-color: var(--neon-purple);
+}
